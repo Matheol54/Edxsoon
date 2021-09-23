@@ -1,0 +1,248 @@
+/* ----------------------Variables ------------- */
+:root{
+    --selected: #9d4edd;
+    --hover: #e0aaff;
+    --dark: #6a00f5;
+    --darkbg: rgb(106, 0, 245,0.5);
+    --border: 1px solid #ff0;
+}
+/* ----------------------Generales ----------------------*/
+
+.content{
+    max-width: 1440px;
+    margin: auto;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #eaeaea;
+    max-width: 100%;
+}
+
+a{
+    color: #f4f4f4;
+    text-decoration: none;
+}
+/* ------------------------- */
+/* ----------------------Header ---------------- */
+.header{
+    height: 60px;
+    z-index: 2;
+    margin-bottom: none;
+}
+
+.header .conteiner{
+    display: flex;
+    justify-content: space-between;
+    background: var(--dark);
+}
+
+.logo{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: .3rem;
+    font-size: 2.5rem;
+    margin: 5px;
+    color: #f4f4f4;
+}
+
+.conteiner i{
+    display: block;
+    font-size: 1.7rem;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;  
+    color: #f4f4f4;
+    border-radius: 5px;
+    margin: 5px;
+    margin-left: auto;
+    cursor: pointer;
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-menu{
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+    display: block;
+    background: var(--selected);
+}
+
+.link-menu:hover{
+    background: var(--hover);
+    transition: .5s;
+    color: var(--selected);
+    font-weight: 600;
+}
+
+.nav{
+    position: absolute;
+    top: 3.75rem;
+    left: -100%;
+    width: 100%;
+    transition: .5s;
+}
+
+.show{
+    z-index: 2;
+    left: 0;
+    transition: .5s;
+}
+
+.selected{
+    background: var(--hover);
+    color: var(--selected);
+}
+
+/* ------------------------------ */
+/* ----------------------Banner--------------------- */
+
+
+.banner{
+
+    height: 80vh;
+    background: var(--dark);
+    position: relative;
+    margin-top: -1px;
+    height: calc(100vh + 1px);
+    color: #f4f4f4;
+ 
+}
+
+.banner-img{
+    min-width: 60%;
+    max-width: 100%;
+    max-height: 60vh;
+    margin-top: 2rem;
+}
+
+.banner .conteiner{
+    position: absolute;
+    width: 100%;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 20%;
+}
+
+.banner-title{
+    font-weight: 700;
+    font-size: 2rem;
+}
+/* --------------------------- */
+/* ----------------------Boton Vamos!---------------------  */
+.go-btn{
+    border: 2px solid #f4f4f4;
+    width: 6rem;
+    padding: 10px;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.go-btn:hover{
+    background: #f4f4f4;
+    color: var(--dark);
+}
+
+/* --------------------------- */
+/* ----------------------Info---------------------  */
+.info{
+    margin: 4rem 0;
+}
+
+.info-column{
+    background: var(--selected);
+    color: #f4f4f4;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+/* --------------------------- */
+/* ----------------------Curos---------------------  */
+.section-title{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--selected);
+    margin-bottom: 1rem;
+}
+
+.course-column{
+    position: relative;
+    background: var(--hover);
+    margin-bottom: 10px;
+}
+
+.course-description{
+    max-width: 60%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #f4f4f4;
+    background: var(--darkbg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+.description-title{
+    font-size: 1.5rem;
+}
+/* --------------------------- */
+/* ----------------------Footer---------------------  */
+.footer{
+    background: #333;
+    color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+}
+.fab{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    padding: 10px;
+    color: #333;
+    background: #f4f4f4;
+    border-radius: 50%;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------Tablet------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+@media (min-width: 426px){
+    .banner{
+        text-align: center;
+    }
+
+    .banner-img{
+        display: inline-block;
+        min-width: 70%;
+        max-width: 90%;
+        max-height: 80vh;
+    }
+    .banner-title{
+        font-size: 2.5rem;
+    }
+}
