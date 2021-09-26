@@ -11,36 +11,47 @@
 .content{
     max-width: 1440px;
     margin: auto;
+    background: #eaeaea;
+    
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  
 }
 img{
     max-width: 100%;
 }
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: #eaeaea;
     max-width: 100%;
     scroll-behavior: smooth;
+
 }
 
 a{
     color: #f4f4f4;
     text-decoration: none;
 }
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------Móvil (S)------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+
 /* ------------------------- */
 /* ----------------------Header ---------------- */
 .header{
     width: 100%;
+    max-width: 1440px;
     line-height: 60px;
     height: 60px;
     z-index: 2;
     margin-bottom: none;
     position: fixed;
+    
 }
 
 .header .conteiner{
@@ -95,7 +106,7 @@ a{
 .nav{
     position: absolute;
     top: 3.75rem;
-    left: -100%;
+    left: -200%;
     width: 100%;
     transition: .5s;
 }
@@ -130,7 +141,7 @@ a{
     min-width: 60%;
     max-width: 100%;
     max-height: 60vh;
-    margin-top: 2rem;
+    margin-top: 20vh;
 }
 
 .banner .conteiner{
@@ -170,20 +181,17 @@ a{
 /* ----------------------Info---------------------  */
 .main-title{
     font-size: 2.2rem;
-    margin: 10px auto;
-    padding: 10px;
+    margin-top: 10vh;
+    padding: 30px 0;
     text-align: center;
     color: var(--selected);
-}
-
-.info{
-    margin: 4rem 0;
 }
 
 .info-column{
     background: var(--selected);
     color: #f4f4f4;
     padding: 1rem;
+    margin: 10px;
     margin-bottom: 2rem;
 }
 
@@ -194,25 +202,28 @@ a{
 /* --------------------------- */
 /* ----------------------Curos---------------------  */
 
-.courses{
-    padding-top: 5rem;
-}
+
 .section-title{
     text-align: center;
     font-size: 2rem;
+    padding-top: 10vh;
+    padding-bottom: 2vh;
     color: var(--selected);
-    margin-bottom: 1rem;
 }
 
 .course-column{
     position: relative;
     background: var(--hover);
+    margin: auto;
     margin-bottom: 10px;
+    max-width: 80%;
+    
 }
 
 .course-description{
     max-width: 60%;
     height: 100%;
+    line-height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -222,10 +233,13 @@ a{
     flex-direction: column;
     justify-content: space-evenly;
     padding: 5px;
+    content: normal;
 }
 
 .description-title{
-    font-size: 1.5rem;
+    display: inline-block;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
 }
 /* --------------------------- */
 /* ----------------------Footer---------------------  */
@@ -246,13 +260,33 @@ a{
     background: #f4f4f4;
     border-radius: 50%;
     margin-bottom: 20px;
+    transition: .5s;
 }
 
+.fab:hover{
+    color: #f4f4f4;
+}
+
+.fa-facebook:hover{
+    background: #3b5998;
+}
+
+.fa-instagram:hover{
+    /* background: rgb(64,93,230); */
+    background: linear-gradient(50deg, rgb(64,93,230) 10%, rgb(88,81,219) 20%, rgb(131, 58, 180) 30%, rgb(193,53,132) 40%, rgb(225,48,108) 50%,rgb(253,29,29) 60%,rgb(245,96,64) 70%,rgb(247,119,55) 80%,rgb(252,175,69) 90%,rgb(193,53,132) 100%);
+}
+
+.fa-twitter:hover{
+    background: #1DA1F2;
+}
+.fa-whatsapp:hover{
+    background: #4AC959;
+}
 /* ------------------------------------------------------------------------------- */
-/* ------------------------------------Tablet------------------------------------ */
+/* ------------------------------------Tablet (M)------------------------------------ */
 /* ------------------------------------------------------------------------------- */
 
-@media (min-width: 426px){
+@media screen and (min-width: 426px){
     .banner{
         text-align: center;
     }
@@ -262,8 +296,90 @@ a{
         min-width: 70%;
         max-width: 90%;
         max-height: 80vh;
+        margin-top: 10vh;
     }
     .banner-title{
         font-size: 2.5rem;
     }
+    .courses{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .course-column{
+        max-width: 45%;
+        margin: 10px;
+    }
+}
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------Portatil (L)------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+    .banner .conteiner{
+        top: 75%;
+    }
+    .banner-img{
+        min-width: 60%;
+        max-width: 80%;
+        margin-top: 6vh;
+    }
+
+    .info{
+        display: flex;
+    }
+
+    .main-title{
+        font-size: 3rem;
+    }
+
+     .info-title{
+        font-size: 2rem;
+    }
+
+    .info-column{
+        max-width: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .courses{
+        display: flex;
+        justify-content: left;
+    }
+    .course-column{
+        max-width: 30%;
+        margin: 10px;
+
+    }
+
+    .description-title{
+        font-size: 2rem;
+    }
+    
+    .section-title{
+        font-size: 2.5rem;
+    }
+
+    .course-description{
+        font-size: 14px;
+    }
+
+    .description-title{
+        font-size: 1.45rem;
+        line-height: 1.4rem;
+    }
+}
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------Desktop (XL)------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+@media (min-width: 1440px) {
+    .banner-img{
+        min-width: 50%;
+        max-width: 70%;
+    }
+    
+  
 }

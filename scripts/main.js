@@ -11,7 +11,14 @@ nav.addEventListener('click', ()=>{
 })
 //--------------------------------------------------
 //-------------------------- Selected nav--------------------------
- 
+const links = document.querySelectorAll('#menu a')
+    links.forEach((elemento) => {
+        elemento.addEventListener('click', (e) =>{
+            links.forEach((link) => link.classList.remove('selected'))
+            e.target.classList.add('selected')
+        })
+    })
+
 
 //--------------------------------------------------
 //-------------------------- Boton  Vamos--------------------------
